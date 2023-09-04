@@ -11,25 +11,25 @@ const advantages: Array<Advantage> = [
     {
         title: 'Цена ниже рынка',
         description: 'Мы работаем с поставщиками, избегая посредников',
-        imgUrl: 'src/assets/advantageIcons/moneyIcon.svg',
+        imgUrl: 'src/assets/moneyIcon.svg',
         id: 0
     },
     {
         title: 'Авито доставка',
         description: 'Доступно по всей России',
-        imgUrl: 'src/assets/advantageIcons/deliveryIcon.svg',
+        imgUrl: 'src/assets/deliveryIcon.svg',
         id: 1
     },
     {
         title: 'Забота о природе',
         description: 'Ели из качественного пластика',
-        imgUrl: 'src/assets/advantageIcons/recycleIcon.svg',
+        imgUrl: 'src/assets/recycleIcon.svg',
         id: 2
     },
     {
         title: 'Подарок каждому',
         description: 'Каждому клиенту индивидуальный подарок',
-        imgUrl: 'src/assets/advantageIcons/presentIcon.svg',
+        imgUrl: 'src/assets/presentIcon.svg',
         id: 3
     }
 ]
