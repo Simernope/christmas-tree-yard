@@ -1,9 +1,13 @@
 import AdvantageCard from "./AdvantageCard.tsx";
+import moneyIcon from './assets/moneyIcon.svg'
+import recycleIcon from './assets/recycleIcon.svg'
+import presentIcon from './assets/presentIcon.svg'
+import deliveryIcon from './assets/deliveryIcon.svg'
 
 type Advantage = {
     title: string
     description: string
-    imgUrl: string
+    image: string
     id: number
 }
 
@@ -11,25 +15,25 @@ const advantages: Array<Advantage> = [
     {
         title: 'Цена ниже рынка',
         description: 'Мы работаем с поставщиками, избегая посредников',
-        imgUrl: 'src/assets/moneyIcon.svg',
+        image: moneyIcon,
         id: 0
     },
     {
         title: 'Авито доставка',
         description: 'Доступно по всей России',
-        imgUrl: 'src/assets/deliveryIcon.svg',
+        image: deliveryIcon,
         id: 1
     },
     {
         title: 'Забота о природе',
         description: 'Ели из качественного пластика',
-        imgUrl: 'src/assets/recycleIcon.svg',
+        image: recycleIcon,
         id: 2
     },
     {
         title: 'Подарок каждому',
         description: 'Каждому клиенту индивидуальный подарок',
-        imgUrl: 'src/assets/presentIcon.svg',
+        image: presentIcon,
         id: 3
     }
 ]
