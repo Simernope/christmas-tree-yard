@@ -3,6 +3,13 @@ import {Button} from "../../components/Button.tsx";
 import {TreeCardProperties} from "./trees.ts";
 import {useMediaQuery} from "../../hooks/useMediaQuery.ts";
 
+const Parameter = (props: { circleColor: string, item: string }) => (
+    <div className='flex gap-2'>
+        <div className={`w-[24px] h-[24px] rounded-[24px] ${props.circleColor}`}></div>
+        <div>{props.item}</div>
+    </div>
+)
+
 const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, properties, height}: TreeCardProperties) => {
     const [isCardHovered, setIsCardHovered] = useState(false)
     const isMobile = useMediaQuery('(max-width: 640px)')
@@ -22,18 +29,9 @@ const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, propertie
                 </div>
             </div>
             <div className='flex gap-2 flex-col'>
-                <div className='flex gap-2'>
-                    <div className='w-[24px] h-[24px] rounded-[24px] bg-[#368B4C]'></div>
-                    <div>{properties[0]}</div>
-                </div>
-                <div className='flex gap-2'>
-                    <div className='w-[24px] h-[24px] rounded-[24px] bg-[#64C37D]'></div>
-                    <div>{properties[1]}</div>
-                </div>
-                <div className='flex gap-2'>
-                    <div className='w-[24px] h-[24px] rounded-[24px] bg-[#A4E276]'></div>
-                    <div>{properties[2]}</div>
-                </div>
+                <Parameter item={properties[0]} circleColor={'bg-[#368B4C]'}/>
+                <Parameter item={properties[1]} circleColor={'bg-[#64C37D]'}/>
+                <Parameter item={properties[2]} circleColor={'bg-[#A4E276]'}/>
             </div>
 
             <Button buttonType={isCardHovered || isMobile ? "gradient" : "secondary"}>

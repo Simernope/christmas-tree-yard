@@ -1,4 +1,4 @@
-import {AdvantagesScreen, ContactsScreen, GoodsScreen, MainScreen, MiniAdvanScreen, QuestionsScreen} from "./";
+import {AdvantagesScreen, ContactsScreen, GoodsScreen, MainScreen, MiniAdvantagesScreen, QuestionsScreen} from "./";
 
 const ScreensList = () => {
     return(
@@ -6,7 +6,7 @@ const ScreensList = () => {
             <MainScreen/>
             <AdvantagesScreen/>
             <GoodsScreen/>
-            <MiniAdvanScreen/>
+            <MiniAdvantagesScreen />
             <QuestionsScreen/>
             <ContactsScreen/>
         </div>
