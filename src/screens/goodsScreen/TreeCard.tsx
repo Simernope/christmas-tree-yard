@@ -1,23 +1,24 @@
 import {FC, useState} from "react";
 import {Button} from "../../components/Button.tsx";
 import {TreeCardProperties} from "./trees.ts";
-import star from '../../assets/star.svg'
+import {useMediaQuery} from "../../hooks/useMediaQuery.ts";
 
-
-const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, properties}: TreeCardProperties) => {
+const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, properties, height}: TreeCardProperties) => {
     const [isCardHovered, setIsCardHovered] = useState(false)
+    const isMobile = useMediaQuery('(max-width: 640px)')
+
     return (
         <div
-            className={`p-2 rounded flex flex-col gap-4 ${isCardHovered && 'shadow-2xl'}`}
+            className={`cursor-pointer p-3 rounded flex flex-col gap-4 ${isCardHovered && 'shadow-2xl'}`}
             onMouseEnter={() => setIsCardHovered(true)}
             onMouseLeave={() => setIsCardHovered(false)}
         >
             <img className='object-cover h-auto flex justify-center' src={image} alt={title}/>
             <div className='flex justify-between'>
-                <div className='text-xl font-medium'>{title}</div>
-                <div className='flex items-center gap-2'>
-                    <div className='text-xl'>{rating.toFixed(2)}</div>
-                    <img className='' src={star} alt='rating'/>
+                <div className='text-xl font-medium'>{title} <span>{height}</span> см</div>
+                <div className='flex items-center gap-2 ml-4'>
+                    <span className='text-xl'>{rating.toFixed(2)}</span>
+                    <span className="material-symbols-outlined w-[25px] h-[25px] text-yellow-500">grade</span>
                 </div>
             </div>
             <div className='flex gap-2 flex-col'>
@@ -35,7 +36,7 @@ const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, propertie
                 </div>
             </div>
 
-            <Button buttonType={isCardHovered ? "gradient" : "secondary"}>
+            <Button buttonType={isCardHovered || isMobile ? "gradient" : "secondary"}>
                 Подробнее — <span className='font-medium'> {cost} ₽</span>
             </Button>
         </div>
