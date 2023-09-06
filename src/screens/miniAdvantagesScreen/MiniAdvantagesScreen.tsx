@@ -12,7 +12,7 @@ const MiniAdvantagesScreen = () => {
         {id: 2, title: '5.00', description: 'рейтинг магазина'}
     ]
     return (
-        <div className='flex flex-wrap items-center justify-around gap-3'>
+        <div className='flex flex-wrap items-center justify-around gap-3 py-3'>
             {
                 advantages.map(item =>
                     <MiniAdvantage key={item.id} title={item.title} description={item.description}/>
