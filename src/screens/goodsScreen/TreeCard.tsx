@@ -16,7 +16,7 @@ const TreeCard: FC<TreeCardProperties> = ({title, rating, cost, image, propertie
 
     return (
         <div
-            className={`cursor-pointer p-3 rounded flex flex-col gap-4 ${isCardHovered && 'shadow-2xl'}`}
+            className={`cursor-pointer p-3 rounded flex flex-col gap-4 ${isCardHovered && 'shadow-2xl'} ${isMobile && 'shadow-2xl'}`}
             onMouseEnter={() => setIsCardHovered(true)}
             onMouseLeave={() => setIsCardHovered(false)}
         >

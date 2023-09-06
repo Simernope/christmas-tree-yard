@@ -13,7 +13,7 @@ const GoodsScreen = () => {
     return (
         <div>
             <div className='text-2xl mb-5'>Предложения</div>
-            <div className='mb-5 flex flex-wrap gap-5'>
+            <div className='mb-5 flex flex-wrap gap-5 justify-around md:justify-normal'>
                 {
                     heights.map((item, index) =>
                         <FilterCard key={index} height={item} isActive={activeCard === item}
