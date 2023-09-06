@@ -1,12 +1,21 @@
-import {AdvantagesScreen, ContactsScreen, GoodsScreen, MainScreen, MiniAdvantagesScreen, QuestionsScreen} from "./";
+import {
+    AdvantagesScreen,
+    ContactsScreen,
+    FeedbackScreen,
+    GoodsScreen,
+    MainScreen,
+    MiniAdvantagesScreen,
+    QuestionsScreen
+} from "./";
 
 const ScreensList = () => {
-    return(
+    return (
         <div className='px-4 flex flex-col gap-8'>
             <MainScreen/>
             <AdvantagesScreen/>
             <GoodsScreen/>
-            <MiniAdvantagesScreen />
+            <MiniAdvantagesScreen/>
+            <FeedbackScreen/>
             <QuestionsScreen/>
             <ContactsScreen/>
         </div>
