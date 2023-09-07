@@ -40,7 +40,7 @@ const advantages: Array<Advantage> = [
 const AdvantagesScreen = () => {
     return (
         <div>
-            <div className='text-2xl mb-5'>Почему вы можете доверять нам</div>
+            <div className='text-2xl mb-5'>Наши преимущества</div>
             <div className='grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1'>
                 {advantages.map(item => <AdvantageCard key={item.id} advantage={item} />)}
             </div>

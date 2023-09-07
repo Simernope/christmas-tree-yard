@@ -1,4 +1,4 @@
-import {Button} from "../../components/Button.tsx"
+import {Button} from "../../components/"
 import mainTree from '../../assets/main-tree.png'
 
 const MainScreen = () => {

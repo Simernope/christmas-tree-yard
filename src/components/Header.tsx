@@ -83,13 +83,9 @@ const Header = () => {
                         </div>
                         <div className='flex flex-col  gap-3 justify-end h-1/2'>
                             <SubHeader/>
-                            {/*<div className='border-t-2 border-green-100 '>
-                                <img className='mt-[0.75rem]' src={logo} alt='logo'/>
-                            </div>*/}
                         </div>
                     </div>
                 }
-
             </div>
         </header>
     )
