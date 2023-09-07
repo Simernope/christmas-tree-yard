@@ -1,5 +1,5 @@
 import {FC, useState} from "react";
-import {Button} from "../../components/Button.tsx";
+import {Button} from "../../components/";
 import {TreeCardProperties} from "./trees.ts";
 import {useMediaQuery} from "../../hooks/useMediaQuery.ts";
 
