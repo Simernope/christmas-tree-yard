@@ -10,13 +10,13 @@ import {
 
 const ScreensList = () => {
     return (
-        <div className='px-4 flex flex-col gap-8'>
+        <div className='px-4 flex flex-col gap-20'>
             <MainScreen/>
             <AdvantagesScreen/>
             <GoodsScreen/>
             <MiniAdvantagesScreen/>
             <FeedbackScreen/>
-            <QuestionsScreen/>
+            <QuestionsScreen />
             <ContactsScreen/>
         </div>
     )

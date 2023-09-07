@@ -3,6 +3,7 @@ import logo from '../assets/logo.svg'
 import mobileLogo from '../assets/logo-sm.svg'
 import {Button} from "./Button.tsx";
 import {useState, useEffect} from "react";
+import {Link} from 'react-scroll';
 
 const SubHeader = () => {
     return (
@@ -51,16 +52,20 @@ const Header = () => {
             }
 
             <div className='p-4 flex justify-between items-center'>
-                <img src={isMobile ? mobileLogo : logo} alt='logo'/>
+                <Link to="/" smooth={true} duration={700} offset={-150} className='cursor-pointer'>
+                    <img src={isMobile ? mobileLogo : logo} alt='logo'/>
+                </Link>
                 {matches
                     ? <div className='flex items-center gap-12 text-xl'>
                         <div className='flex gap-3'>
-                            <div>Товары</div>
-                            <div>Отзывы</div>
-                            <div>Вопросы</div>
-                            <div>Контакты</div>
+                            <Link to="goods" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Товары</Link>
+                            <Link to="feedback" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Отзывы</Link>
+                            <Link to="questions" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Вопросы</Link>
+                            <Link to="contacts" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Контакты</Link>
                         </div>
-                        <Button buttonType='default'>К предложениям</Button>
+                        <Link  to="goods" smooth={true} duration={700} offset={-150} className='cursor-pointer'>
+                            <Button buttonType='default'>К предложениям</Button>
+                        </Link>
                     </div>
                     : <span className="material-symbols-outlined cursor-pointer" onClick={() => setIsMenuOpen(true)}>
                             menu
@@ -75,10 +80,10 @@ const Header = () => {
                                   onClick={() => setIsMenuOpen(false)}>close</span>
                             </div>
                             <div className='flex gap-3 flex-col m-2 items-center text-xl'>
-                                <div>Товары</div>
-                                <div>Отзывы</div>
-                                <div>Вопросы</div>
-                                <div>Контакты</div>
+                                <Link to="goods" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Товары</Link>
+                                <Link to="feedback" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Отзывы</Link>
+                                <Link to="questions" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Вопросы</Link>
+                                <Link to="contacts" smooth={true} duration={700} offset={-150} className='cursor-pointer'>Контакты</Link>
                             </div>
                         </div>
                         <div className='flex flex-col  gap-3 justify-end h-1/2'>

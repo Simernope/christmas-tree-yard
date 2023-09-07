@@ -8,3 +8,7 @@
     color: rgb(5 46 22);
   }
 }
+
+.active{
+  color: blueviolet;
+}

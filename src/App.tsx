@@ -4,7 +4,7 @@ import {useMediaQuery} from "./hooks/useMediaQuery.ts";
 
 function App() {
     return (
-        <div className='w-full bg-white'>
+        <div className='w-full bg-white' id='/'>
             <Header/>
             <main
                 className={`container mx-auto ${useMediaQuery('(min-width: 1000px)') ? 'mt-[127px]' : ' mt-[82px]'} mb-[100px] `}>
