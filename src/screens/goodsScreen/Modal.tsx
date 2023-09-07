@@ -25,9 +25,10 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                     bg-white
                     p-5
                     rounded-xl
-                    max-h-screen
+                    max-h-[90vh]
                     overflow-y-auto
-                    w-min
+                    w-11/12
+                    md:w-min
                     lg:w-fit
                     '>
                 <div className='flex  justify-end'>
@@ -41,10 +42,10 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                     <div className='flex flex-col justify-between  md:w-[500px]'>
                         <div className='flex flex-col gap-5 '>
 
-                            <div className='flex  justify-between'>
+                            <div className='flex flex-wrap   justify-between'>
                                 <div className='text-xl font-medium'>{treeInfo.title} <span>{treeInfo.height}</span> см
                                 </div>
-                                <div className='flex  gap-2 ml-4'>
+                                <div className='flex  gap-2 '>
                                     <span className='text-xl'>{treeInfo.rating.toFixed(2)}</span>
                                     <span
                                         className="material-symbols-outlined w-[25px] h-[25px] text-yellow-500">grade</span>
