@@ -1,5 +1,6 @@
 import {Button} from "../../components/"
 import mainTree from '../../assets/main-tree.png'
+import {Link} from 'react-scroll';
 
 const MainScreen = () => {
     return (
@@ -23,7 +24,9 @@ const MainScreen = () => {
                         <div className='text-xl'>
                             Онлайн - магазин искусственных елей, чтобы в два клика создать атмсферу праздника
                         </div>
+                        <Link to="goods" smooth={true} duration={1000} offset={-150}>
                         <Button buttonType='primary'>К подборкам</Button>
+                        </Link>
                     </div>
                 </div>
             </div>

@@ -13,7 +13,7 @@ const QrLink = (props: { image: string, description: string }) => {
 
 const ContactsScreen = () => {
     return (
-        <div>
+        <section id='contacts'>
             <div className='text-2xl mb-5'>Контакты</div>
             <div className='flex gap-10 flex-wrap justify-between'>
                 <div className='flex flex-col md:flex-row lg:flex-col gap-10'>
@@ -34,7 +34,7 @@ const ContactsScreen = () => {
                     <QrLink image={qr} description={'Группа в телеграмме'}/>
                 </div>
             </div>
-        </div>
+        </section>
 
     )
 }

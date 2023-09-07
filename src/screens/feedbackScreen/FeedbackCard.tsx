@@ -3,7 +3,7 @@ import {FeedbackDto} from "./feedback.ts";
 
 const FeedbackCard: FC<FeedbackDto> = ({name, image, good, rating, method, comment}: FeedbackDto) => {
     return (
-        <div className='flex flex-wrap lg:flex-nowrap gap-3 items-center'>
+        <div className='flex flex-wrap lg:flex-nowrap gap-3 items-center shadow p-4 rounded-xl'>
             <img src={image} alt='feedbackImage'/>
             <div className='flex flex-col gap-3'>
                 <div className='flex items-center justify-between'>

@@ -4,7 +4,7 @@ import {QuestionDto} from "./questions.ts";
 const Question: FC<QuestionDto> = ({question, answer}: QuestionDto) => {
     const [isOpen, setIsOpen] = useState(false)
     return (
-        <div className='px-3 py-1'>
+        <div className='px-3 py-2'>
             <div className='flex items-center justify-between'>
                 <div className='text-xl font-medium text-green-800'>{question}</div>
                 {

@@ -11,7 +11,7 @@ const GoodsScreen = () => {
         if (tree.filterCategory === activeCard) return tree
     })
     return (
-        <div>
+        <section id='goods'>
             <div className='text-2xl mb-5'>Предложения</div>
             <div className='mb-5 flex flex-wrap gap-5 justify-around md:justify-normal'>
                 {
@@ -38,7 +38,7 @@ const GoodsScreen = () => {
                     )
                 }
             </div>
-        </div>
+        </section>
     )
 }
 

@@ -3,7 +3,7 @@ import FeedbackCard from "./FeedbackCard.tsx";
 
 const FeedbackScreen = () => {
     return (
-        <div>
+        <section id='feedback'>
             <div className='text-2xl mb-5'>Отзывы</div>
             <div className='grid grid-cols-1 md:grid-cols-2 gap-10'>
                 {
@@ -20,7 +20,7 @@ const FeedbackScreen = () => {
                     ))
                 }
             </div>
-        </div>
+        </section>
     )
 }
 
