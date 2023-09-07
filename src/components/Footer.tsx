@@ -24,7 +24,7 @@ const SubFooter = () => {
 const Footer = () => {
     return (
         <footer
-            className='divide-y divide-slate-200 w-full bg-white z-40 '
+            className='divide-y divide-slate-200 w-full bg-white z-20 '
         >
             <div></div>
             <SubFooter/>

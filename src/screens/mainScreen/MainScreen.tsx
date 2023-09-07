@@ -30,7 +30,7 @@ const MainScreen = () => {
                     </div>
                 </div>
             </div>
-            <div className='z-20 flex justify-center lg:w-1/2 xl:w-1/2'>
+            <div className='z-10 flex justify-center lg:w-1/2 xl:w-1/2'>
                 <img alt="main-tree" src={mainTree}/>
             </div>
         </section>
