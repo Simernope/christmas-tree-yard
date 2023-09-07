@@ -2,12 +2,21 @@ import {contacts} from "./contacts.ts";
 import ContactCard from "./ContactCard.tsx";
 import qr from './assets/qr.png'
 
+const QrLink = (props: { image: string, description: string }) => {
+    return (
+        <div className='flex flex-col gap-2 items-center w-[150px]'>
+            <img src={props.image} alt='qr code'/>
+            <div className='underline'>{props.description}</div>
+        </div>
+    )
+}
+
 const ContactsScreen = () => {
     return (
         <div>
             <div className='text-2xl mb-5'>Контакты</div>
-            <div className='flex flex-col xl:flex-row justify-between gap-10'>
-                <div className='flex flex-col md:flex-row gap-10 '>
+            <div className='flex gap-10 flex-wrap justify-between'>
+                <div className='flex flex-col md:flex-row lg:flex-col gap-10'>
                     {
                         contacts.map(item => (
                             <ContactCard
@@ -19,23 +28,14 @@ const ContactsScreen = () => {
                         ))
                     }
                 </div>
-
-                <div className='flex gap-10 flex-col sm:flex-row'>
-                    <div className='flex flex-col gap-3 xl:items-center w-[150px] xl:w-1/3'>
-                        <img src={qr} alt='qr code'/>
-                        <div className='underline'>Авито аккаунт</div>
-                    </div>
-                    <div className='flex flex-col gap-3 xl:items-center w-[150px] xl:w-1/3'>
-                        <img src={qr} alt='qr code'/>
-                        <div className='underline'>Адрес магазина в Екатеринбурге</div>
-                    </div>
-                    <div className='flex flex-col gap-3 xl:items-center w-[150px] xl:w-1/3'>
-                        <img src={qr} alt='qr code'/>
-                        <div className='underline'>Группа в телеграмме</div>
-                    </div>
+                <div className='flex gap-10 flex-wrap'>
+                    <QrLink image={qr} description={'Авито аккаунт'}/>
+                    <QrLink image={qr} description={'Адрес магазина в Екатеринбурге'}/>
+                    <QrLink image={qr} description={'Группа в телеграмме'}/>
                 </div>
             </div>
         </div>
+
     )
 }
 
