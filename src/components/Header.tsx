@@ -44,7 +44,7 @@ const Header = () => {
 
     return (
         <header
-            className={`divide-y divide-slate-200 ${!isTopOfPage && 'shadow-md'} fixed top-0 w-full bg-white z-40`}>
+            className={`divide-y divide-slate-200 ${!isTopOfPage && 'shadow-md'} fixed top-0 w-full bg-white z-20`}>
             {matches &&
                 <div className='flex justify-end p-2 gap-3 text-lg'>
                     <SubHeader/>
@@ -73,7 +73,7 @@ const Header = () => {
                 }
                 {isMenuOpen && !matches &&
                     <div
-                        className='bg-green-50 p-4 fixed right-0 bottom-0 z-40 h-full w-[300px] bg-secondary-50 drop-shadow-xl'>
+                        className='bg-green-50 p-4 fixed right-0 bottom-0 z-20 h-full w-[300px] bg-secondary-50 drop-shadow-xl'>
                         <div className='h-1/2'>
                             <div className='h-[50px] flex justify-end items-center'>
                             <span className="material-symbols-outlined cursor-pointer"
