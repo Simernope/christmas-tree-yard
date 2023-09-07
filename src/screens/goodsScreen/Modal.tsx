@@ -42,7 +42,7 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                     <div className='flex flex-col justify-between  md:w-[500px]'>
                         <div className='flex flex-col gap-5 '>
 
-                            <div className='flex flex-wrap   justify-between'>
+                            <div className='flex flex-wrap justify-between'>
                                 <div className='text-xl font-medium'>{treeInfo.title} <span>{treeInfo.height}</span> см
                                 </div>
                                 <div className='flex  gap-2 '>
@@ -63,7 +63,7 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                                 100 рублей, но оно того стоит.
                             </div>
 
-                            <div className='underline'>
+                            <div className='underline mb-3'>
                                 Посмотреть этот товар на Авито
                             </div>
 
