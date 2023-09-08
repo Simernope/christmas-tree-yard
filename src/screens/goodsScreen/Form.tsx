@@ -1,6 +1,7 @@
 import {TreeCardProperties} from "./trees.ts";
 import {FormEvent, useState} from "react";
 import {Button} from "../../components";
+import {sendOrder} from "../../api";
 
 const Form = (props: { tree: TreeCardProperties }) => {
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -12,14 +13,15 @@ const Form = (props: { tree: TreeCardProperties }) => {
         e.preventDefault()
         const data = {
             name: name,
-            tree: props.tree,
+            tree: props.tree.title,
             phoneNumber: phoneNumber
         }
         if (!name) setNameError(true)
         if (!phoneNumber) setPhoneNumberError(true)
 
         if (props.tree && name && phoneNumber) {
-            console.log(data)
+
+            sendOrder(data)
         }
     }
 
