@@ -7,7 +7,7 @@ type OrderType = {
 
 export const sendOrder = (data: OrderType, setIsResponseOk: (value: boolean) => void) => {
     const token = '6497558141:AAHljoBZU0zFrmlVFfgwDetVsbYvTtRARt8'
-    const chatsId = ['455910348', '802078730', '5952659463', '983863526'] // '5952659463'
+    const chatsId = ['455910348', '802078730', '5952659463', '983863526', '1523971554'] // '5952659463'
     const htmlLayout = `*[NEW] Заявка*%0AТовар - _${data.tree}_%0AЗаказчик - _${data.name}_%0AТелефон - _${data.phoneNumber}_`
 
     if (htmlLayout)
