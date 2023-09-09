@@ -3,12 +3,14 @@ import {TreeCardProperties} from "./trees.ts";
 import {Parameter} from "./Parametr.tsx";
 import Form from "./Form.tsx";
 
+
 type ModalProps = {
     treeInfo: TreeCardProperties,
     setActive: (value: boolean) => void
 }
 
 const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
+
     return (
         <div
             onClick={() => setActive(false)}
@@ -30,6 +32,7 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                     w-11/12
                     md:w-min
                     lg:w-fit
+                    relative
                     '>
                 <div className='flex  justify-end'>
                     <span className="material-symbols-outlined text-green-800 cursor-pointer"
@@ -70,11 +73,11 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                         </div>
 
                         <Form tree={treeInfo}/>
+
+                        </div>
                     </div>
                 </div>
             </div>
-
-        </div>
     )
 }
 
