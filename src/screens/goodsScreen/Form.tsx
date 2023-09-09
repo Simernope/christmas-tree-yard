@@ -1,15 +1,17 @@
 import {TreeCardProperties} from "./trees.ts";
-import {FormEvent, useState} from "react";
+import {FormEvent, useEffect, useState} from "react";
 import {Button} from "../../components";
 import {sendOrder} from "../../api";
 
 const Form = (props: { tree: TreeCardProperties }) => {
+    const [isResponseOk, setIsResponseOk] = useState<boolean | undefined >()
+    const [pending, setPending] = useState(false)
     const [phoneNumber, setPhoneNumber] = useState('')
     const [name, setName] = useState<string>('')
     const [phoneNumberError, setPhoneNumberError] = useState(false)
     const [nameError, setNameError] = useState(false)
 
-    const handleFormData = (e: FormEvent<HTMLFormElement>) => {
+    const handleFormData = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault()
         const data = {
             name: name,
@@ -20,14 +22,27 @@ const Form = (props: { tree: TreeCardProperties }) => {
         if (!phoneNumber) setPhoneNumberError(true)
 
         if (props.tree && name && phoneNumber) {
-
-            sendOrder(data)
+            await setPending(true)
+            await sendOrder(data, setIsResponseOk)
         }
     }
 
+
+    useEffect(() => {
+        if (isResponseOk !== null){
+            setPending(false)
+        }
+    }, [sendOrder, isResponseOk])
+
     return (
         <div className='flex flex-col gap-3'>
-            <div className='font-medium'>Оставьте заявку и мы свяжемся с вами!</div>
+
+            <div className='font-medium mt-5'>Оставьте заявку и мы свяжемся с вами!</div>
+            {
+                isResponseOk
+                    ? <div className='font-bold text-green-900'>Все ок!</div>
+                    : isResponseOk !== undefined && <div className='font-bold text-red-500'>Ошибка</div>
+            }
             <form className='flex flex-col gap-3' onSubmit={handleFormData}>
                 <div>
                     <label className="block text-sm font-medium mb-2" htmlFor="username">
@@ -78,12 +93,16 @@ const Form = (props: { tree: TreeCardProperties }) => {
                 </div>
                 <div className='mt-2'>
                     <Button buttonType={'gradient'}>
-                        {/*<div className='flex gap-2 items-center'>
-                            <span className="material-symbols-outlined animate-spin">autorenew</span>
-                            <span>Загрузка...</span>
-                        </div>*/}
+                        {
+                            pending ?
+                                <div className='flex gap-2 items-center justify-center'>
+                                    <span className="material-symbols-outlined animate-spin">autorenew</span>
+                                    <span>Загрузка...</span>
+                                </div>
+                                :
+                                <div>Оставить заявку</div>
+                        }
 
-                        Оставить заявку
                     </Button>
                 </div>
             </form>
