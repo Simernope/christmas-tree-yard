@@ -1,9 +1,20 @@
-import {TreeCardProperties} from "./trees.ts";
-import {FormEvent, useEffect, useState} from "react";
+import {FC, FormEvent, useEffect, useState} from "react";
 import {Button} from "../../components";
 import {sendOrder} from "../../api";
 
-const Form = (props: { tree: TreeCardProperties }) => {
+type FormProps = {
+    tree: {
+        "title": string,
+        "height": number,
+        "rating": number,
+        "cost": number,
+        "image": string,
+        "properties": Array<string>
+    }
+
+}
+
+const Form: FC<FormProps> = ({tree}: FormProps) => {
     const [isResponseOk, setIsResponseOk] = useState<boolean | undefined>()
     const [pending, setPending] = useState(false)
     const [phoneNumber, setPhoneNumber] = useState('')
@@ -15,13 +26,13 @@ const Form = (props: { tree: TreeCardProperties }) => {
         e.preventDefault()
         const data = {
             name: name,
-            tree: props.tree.title,
+            tree: tree.title,
             phoneNumber: phoneNumber
         }
         if (!name) setNameError(true)
         if (!phoneNumber) setPhoneNumberError(true)
 
-        if (props.tree && name && phoneNumber) {
+        if (tree && name && phoneNumber) {
             await setPending(true)
             await sendOrder(data, setIsResponseOk)
         }
@@ -33,6 +44,8 @@ const Form = (props: { tree: TreeCardProperties }) => {
             setPending(false)
         }
     }, [isResponseOk])
+
+    console.log(tree)
 
     return (
         <div className='flex flex-col gap-3'>
@@ -54,7 +67,7 @@ const Form = (props: { tree: TreeCardProperties }) => {
                             <input
                                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline "
                                 disabled
-                                value={props.tree.title}
+                                value={tree.title}
                             />
                         </div>
                         <div>
@@ -103,7 +116,7 @@ const Form = (props: { tree: TreeCardProperties }) => {
                                             <span>Загрузка...</span>
                                         </div>
                                         :
-                                        <div>Оставить заявку - <span> {props.tree.cost} ₽</span>
+                                        <div>Оставить заявку - <span> {tree.cost} ₽</span>
                                         </div>
                                 }
 
@@ -117,8 +130,8 @@ const Form = (props: { tree: TreeCardProperties }) => {
                 <div className='flex flex-col gap-3 mt-5'>
                     <div className='text-xl font-medium'>Отлично!</div>
                     <div> Заявка на
-                        <span className='font-medium'> {props.tree.title} </span>
-                        стоимостью <span className='font-medium'> {props.tree.cost} ₽ </span>
+                        <span className='font-medium'> {tree.title} </span>
+                        стоимостью <span className='font-medium'> {tree.cost} ₽ </span>
                         оставлена
                     </div>
 

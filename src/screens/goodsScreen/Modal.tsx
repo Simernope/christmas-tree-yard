@@ -1,16 +1,22 @@
 import {FC} from "react";
-import {TreeCardProperties} from "./trees.ts";
 import {Parameter} from "./Parametr.tsx";
 import Form from "./Form.tsx";
 
 
 type ModalProps = {
-    treeInfo: TreeCardProperties,
+    treeInfo: {
+        "title": string,
+        "height": number,
+        "rating": number,
+        "cost": number,
+        "image": string,
+        "properties": Array<string>
+    },
     setActive: (value: boolean) => void
 }
 
 const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
-
+    console.log(treeInfo)
     return (
         <div
             onClick={() => setActive(false)}
