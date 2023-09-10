@@ -1,7 +1,7 @@
-import tree1 from './assets/ель1.png'
+/*import tree1 from './assets/ель1.png'
 import tree2 from './assets/ель2.png'
 import tree3 from './assets/ель3.png'
-import tree4 from './assets/ель4.png'
+import tree4 from './assets/ель4.png'*/
 
 import alpic1 from './assets/alpic/alpic1.jpg'
 import alpic2 from './assets/alpic/alpic2.jpg'
@@ -13,7 +13,7 @@ import lesnaya1 from './assets/lesnaya/lesnaya1.jpg'
 import lesnaya2 from './assets/lesnaya/lesnaya2.jpg'
 
 
-type Properties = {
+export type TreesCardProperties = {
     id: number
     title: string
     image: [string, string]
@@ -23,19 +23,20 @@ type Properties = {
             height: number
             rating: number
             cost: number
+            avitoLink: string
             properties: Array<{ id: number, title: string }>
         }
     >
 }
 
-export const a: Array<Properties> = [
+export const trees: Array<TreesCardProperties> = [
     {
         id: 1,
         title: 'Альпийская',
         image: [alpic1, alpic2],
         trees: [
             {
-                id: 11, height: 150, cost: 6900, rating: 5.00,
+                id: 11, height: 150, cost: 6900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 111, title: 'Литые веточки'},
                     {id: 112, title: 'Диаметр: 15 см'},
@@ -44,7 +45,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 12, height: 180, cost: 9900, rating: 5.00,
+                id: 12, height: 180, cost: 9900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 121, title: 'Литые веточки'},
                     {id: 122, title: 'Диаметр: 15 см'},
@@ -53,7 +54,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 13, height: 210, cost: 10900, rating: 5.00,
+                id: 13, height: 210, cost: 10900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 131, title: 'Литые веточки'},
                     {id: 132, title: 'Диаметр: 15 см'},
@@ -70,7 +71,7 @@ export const a: Array<Properties> = [
         image: [tumen1, tumen2],
         trees: [
             {
-                id: 21, height: 180, cost: 12900, rating: 5.00,
+                id: 21, height: 180, cost: 12900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 211, title: 'Литые веточки'},
                     {id: 212, title: 'Диаметр: 15 см'},
@@ -79,7 +80,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 22, height: 210, cost: 15900, rating: 5.00,
+                id: 22, height: 210, cost: 15900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 221, title: 'Литые веточки'},
                     {id: 222, title: 'Диаметр: 15 см'},
@@ -88,7 +89,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 23, height: 230, cost: 18900, rating: 5.00,
+                id: 23, height: 230, cost: 18900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 231, title: 'Литые веточки'},
                     {id: 232, title: 'Диаметр: 15 см'},
@@ -97,7 +98,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 24, height: 2500, cost: 22900, rating: 5.00,
+                id: 24, height: 250, cost: 22900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 241, title: 'Литые веточки'},
                     {id: 242, title: 'Диаметр: 15 см'},
@@ -114,7 +115,7 @@ export const a: Array<Properties> = [
         image: [saratov1, saratov2],
         trees: [
             {
-                id: 31, height: 180, cost: 13500, rating: 5.00,
+                id: 31, height: 180, cost: 13500, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 311, title: 'Литые веточки'},
                     {id: 312, title: 'Диаметр: 15 см'},
@@ -123,7 +124,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 32, height: 210, cost: 16500, rating: 5.00,
+                id: 32, height: 210, cost: 16500, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 321, title: 'Литые веточки'},
                     {id: 3212, title: 'Диаметр: 15 см'},
@@ -132,7 +133,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 33, height: 230, cost: 19900, rating: 5.00,
+                id: 33, height: 230, cost: 19900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 331, title: 'Литые веточки'},
                     {id: 332, title: 'Диаметр: 15 см'},
@@ -149,7 +150,7 @@ export const a: Array<Properties> = [
         image: [lesnaya1, lesnaya2],
         trees: [
             {
-                id: 41, height: 180, cost: 10900, rating: 5.00,
+                id: 41, height: 180, cost: 10900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 411, title: 'Литые веточки'},
                     {id: 412, title: 'Диаметр: 15 см'},
@@ -158,7 +159,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 42, height: 210, cost: 13900, rating: 5.00,
+                id: 42, height: 210, cost: 13900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 421, title: 'Литые веточки'},
                     {id: 4212, title: 'Диаметр: 15 см'},
@@ -167,7 +168,7 @@ export const a: Array<Properties> = [
                 ]
             },
             {
-                id: 43, height: 230, cost: 17900, rating: 5.00,
+                id: 43, height: 230, cost: 17900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
                 properties: [
                     {id: 431, title: 'Литые веточки'},
                     {id: 432, title: 'Диаметр: 15 см'},
@@ -180,6 +181,7 @@ export const a: Array<Properties> = [
     },
 ]
 
+/*
 export type TreeCardProperties = {
     id: number
     title: string
@@ -231,4 +233,4 @@ export const trees: Array<TreeCardProperties> = [
         properties: ['180 см', 'Литой пластик', 'Подставка'],
         filterCategory: "160-210 см"
     }
-]
+]*/
