@@ -1,4 +1,4 @@
-import {trees} from "./trees.ts";
+import {trees, a} from "./trees.ts";
 import TreeCard from "./TreeCard.tsx";
 import FilterCard from "./FilterCard.tsx";
 import {useState} from "react";
@@ -23,19 +23,18 @@ const GoodsScreen = () => {
             </div>
             <div className='grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8'>
                 {
-                    filteredTrees.map(tree =>
+                    a.map(mainTree => mainTree.trees.map(tree =>
                         <TreeCard
                             key={tree.id}
                             id={tree.id}
-                            title={tree.title}
+                            title={mainTree.title}
+                            height={tree.height}
                             rating={tree.rating}
                             cost={tree.cost}
-                            image={tree.image}
-                            height={tree.height}
-                            properties={tree.properties}
-                            filterCategory={tree.filterCategory}
-                        />
-                    )
+                            image={mainTree.image[0]}
+                            filterCategory={'120-150 см'}
+                            properties={['180 см', 'Литой пластик', 'Подставка']} />
+                    ))
                 }
             </div>
         </section>

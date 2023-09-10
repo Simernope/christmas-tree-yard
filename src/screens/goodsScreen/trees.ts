@@ -28,7 +28,7 @@ type Properties = {
     >
 }
 
-const a: Array<Properties> = [
+export const a: Array<Properties> = [
     {
         id: 1,
         title: 'Альпийская',
