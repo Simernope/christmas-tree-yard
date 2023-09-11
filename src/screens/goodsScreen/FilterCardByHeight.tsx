@@ -11,7 +11,7 @@ const FilterCardByHeight:FC<FilterCardProps> = ({height, isActive, setActiveCard
     return(
         <div onClick={() => setActiveCardByHeight(height)}
              className={`flex gap-3 items-center px-2 py-1 rounded-lg border-2 border-green-700 cursor-pointer ${isActive ? 'opacity-100' : 'opacity-50'}`}>
-            <img src={filterIcon} alt='filterIcon'/>
+            <img src={filterIcon} alt='filterIcon' className='h-[28px]'/>
             <div className='font-medium text-green-800 text-lg'>{height}</div>
         </div>
     )

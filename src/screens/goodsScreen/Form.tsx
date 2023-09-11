@@ -26,7 +26,7 @@ const Form: FC<FormProps> = ({tree}: FormProps) => {
         e.preventDefault()
         const data = {
             name: name,
-            tree: tree.title,
+            tree: `${tree.title} ${tree.height} см`,
             phoneNumber: phoneNumber
         }
         if (!name) setNameError(true)
@@ -45,7 +45,9 @@ const Form: FC<FormProps> = ({tree}: FormProps) => {
         }
     }, [isResponseOk])
 
-    console.log(tree)
+    useEffect(() => {
+        setIsResponseOk(undefined)
+    }, [tree])
 
     return (
         <div className='flex flex-col gap-3'>
@@ -116,8 +118,7 @@ const Form: FC<FormProps> = ({tree}: FormProps) => {
                                             <span>Загрузка...</span>
                                         </div>
                                         :
-                                        <div>Оставить заявку - <span> {tree.cost} ₽</span>
-                                        </div>
+                                        <div>Оставить заявку</div>
                                 }
 
                             </Button>
@@ -130,15 +131,15 @@ const Form: FC<FormProps> = ({tree}: FormProps) => {
                 <div className='flex flex-col gap-3 mt-5'>
                     <div className='text-xl font-medium'>Отлично!</div>
                     <div> Заявка на
-                        <span className='font-medium'> {tree.title} </span>
-                        стоимостью <span className='font-medium'> {tree.cost} ₽ </span>
+                        <span className='font-medium'> {tree.title} {tree.height} см</span> стоимостью <span
+                            className='font-medium'> {tree.cost} ₽ </span>
                         оставлена
                     </div>
 
                     <div>Скоро мы свяжемся с вами по номеру
                         <span className='font-medium'> {phoneNumber}</span>
                     </div>
-                    <div>По всем вопросам звоните: <span className='font-medium'> +7-800-555-35-35</span></div>
+                    <div>По всем вопросам звоните: <span className='font-medium'> +7-999-568-15-77</span></div>
                 </div>
             }
 

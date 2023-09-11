@@ -42,7 +42,10 @@ const TreeCard: FC<TreeCardProps> = (treeCardProperties) => {
                     )
                 }
             </div>
-            <div onClick={() => setIsModalOpen(true)}>
+            <div onClick={() => {
+                setIsModalOpen(true)}
+
+            }>
                 <Button buttonType={isCardHovered || isMobile ? "gradient" : "secondary"}>
                     Подробнее — <span className='font-medium'> {cost} ₽</span>
                 </Button>

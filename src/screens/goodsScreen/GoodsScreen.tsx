@@ -2,9 +2,10 @@ import {trees} from "./trees.ts";
 import TreeCard from "./TreeCard.tsx";
 import FilterCardByHeight from "./FilterCardByHeight.tsx";
 import {useState} from "react";
-import FilterCardByTitle from "./assets/FilterCardByTitle.tsx";
+import FilterCardByTitle from "./FilterCardByTitle.tsx";
 
 const GoodsScreen = () => {
+    //const [selectedTree, setSelectedTree] = useState()
     const [activeCardByHeight, setActiveCardByHeight] = useState('Все размеры')
     const [activeCardByTitle, setActiveCardByTitle] = useState('Все модели')
     const heights = ['Все размеры', '150 см', '180 см', '210 см', '230 см', '250 см']
@@ -59,7 +60,8 @@ const GoodsScreen = () => {
                                     rating={tree.rating}
                                     cost={tree.cost}
                                     image={tree.image[0]}
-                                    properties={tree.properties.map(property => property.title)}/>
+                                    properties={tree.properties.map(property => property.title)}
+                                />
                             )}
 
                     </div>
