@@ -7,7 +7,7 @@ const MiniAdvantage = (props: { title: string, description: string }) => (
 
 const MiniAdvantagesScreen = () => {
     const advantages = [
-        {id: 0, title: '2 года ', description: 'радуем клиентов'},
+        {id: 0, title: '3 года ', description: 'радуем клиентов'},
         {id: 1, title: '> 1000', description: 'сделок на авито'},
         {id: 2, title: '5.00', description: 'рейтинг магазина'}
     ]

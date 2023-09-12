@@ -10,15 +10,15 @@ const SubHeader = () => {
         <>
             <div className='flex items-center gap-2 '>
                 <span className="material-symbols-outlined">location_on</span>
-                Екатеринбург, Краснолесья 32,
+                Екатеринбург, Краснолесья 28
             </div>
             <div className='flex items-center gap-2'>
                 <span className="material-symbols-outlined">call</span>
-                +7-912-222-23-43
+                +7-999-568-15-77
             </div>
             <div className='flex items-center gap-2'>
                 <span className="material-symbols-outlined">schedule</span>
-                10:00 - 20:00, без выходных
+                12:00 - 20:00, без выходных
             </div>
         </>
     )
