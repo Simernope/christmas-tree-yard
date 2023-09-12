@@ -3,6 +3,7 @@ import {Parameter} from "./Parametr.tsx";
 import Form from "./Form.tsx";
 import {trees} from "./trees.ts";
 import FilterCardByHeight from "./FilterCardByHeight.tsx";
+import ImageSlider from "./ImageSlider.tsx";
 
 
 type ModalProps = {
@@ -11,7 +12,7 @@ type ModalProps = {
         "height": number,
         "rating": number,
         "cost": number,
-        "image": string,
+        "image": [string, string],
         "properties": Array<string>
     },
     setActive: (value: boolean) => void
@@ -70,9 +71,9 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                             close
                         </span>
                 </div>
-                <div className='flex gap-10 p-5 text-green-800 flex-wrap justify-center'>
-                    <img src={image} alt={'tree'}
-                         className='sm:max-h-[70vh] lg:max-h-[70vh] xl:max-h-[80vh] rounded-xl'/>
+                <div className='flex gap-10 p-5 text-green-800 flex-wrap lg:flex-nowrap justify-center'>
+                    <ImageSlider image={image} alt={title}
+                                 styles=' sm:max-h-[70vh]   lg:max-h-[70vh] xl:max-h-[80vh] rounded-xl'/>
                     <div className='flex flex-col justify-between  md:w-[500px]'>
                         <div className='flex flex-col gap-5 '>
 
@@ -89,7 +90,7 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                             <div className='font-medium text-lg'>
                                 {cost} ₽
                                 <span
-                                    className='line-through decoration-red-500 font-normal ml-2 text-lg'>{cost + 1000}₽</span>
+                                    className='line-through decoration-red-500 font-normal ml-2 text-lg'>{cost + 1000} ₽</span>
                             </div>
 
                             <div className='flex flex-wrap gap-3 lg:gap-3'>

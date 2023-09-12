@@ -3,12 +3,13 @@ import {Button} from "../../components/";
 import {useMediaQuery} from "../../hooks/useMediaQuery.ts";
 import Modal from "./Modal.tsx";
 import {Parameter} from "./Parametr.tsx";
+import ImageSlider from "./ImageSlider.tsx";
 
 type TreeCardProps = {
     title: string,
     rating: number,
     cost: number,
-    image: string,
+    image: [string, string],
     properties: Array<string>,
     height: number
 }
@@ -27,9 +28,12 @@ const TreeCard: FC<TreeCardProps> = (treeCardProperties) => {
             onMouseEnter={() => setIsCardHovered(true)}
             onMouseLeave={() => setIsCardHovered(false)}
         >
-            <img className='object-cover h-auto flex justify-center' src={image} alt={title}/>
-            <div className='flex justify-between'>
-                <div className='text-xl font-medium'>{title} <span>{height}</span> см</div>
+            <div className='flex flex-grow'>
+                <ImageSlider image={image} alt={title} styles='object-cover h-auto flex justify-center '/>
+
+            </div>
+            <div className='flex justify-between flex-grow-0'>
+                <div className='text-xl font-medium '>{title} <span>{height}</span> см</div>
                 <div className='flex items-center gap-2 ml-4'>
                     <span className='text-xl'>{rating.toFixed(2)}</span>
                     <span className="material-symbols-outlined w-[25px] h-[25px] text-yellow-500">grade</span>
@@ -43,7 +47,8 @@ const TreeCard: FC<TreeCardProps> = (treeCardProperties) => {
                 }
             </div>
             <div onClick={() => {
-                setIsModalOpen(true)}
+                setIsModalOpen(true)
+            }
 
             }>
                 <Button buttonType={isCardHovered || isMobile ? "gradient" : "secondary"}>

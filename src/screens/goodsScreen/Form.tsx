@@ -8,7 +8,7 @@ type FormProps = {
         "height": number,
         "rating": number,
         "cost": number,
-        "image": string,
+        "image": [string, string],
         "properties": Array<string>
     }
 
