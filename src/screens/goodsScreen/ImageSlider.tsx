@@ -16,9 +16,16 @@ const ImageSlider: FC<ImageSliderProps> = ({image, alt, styles}: ImageSliderProp
     return (
         <div className={`relative group`}>
             <div>
-                <img src={image[currentImage]} alt={alt} className={styles}/>
-
+                {
+                    currentImage === 0 &&
+                    <img src={image[0]} alt={alt} className={styles}/>
+                }
+                {
+                    currentImage === 1 &&
+                    <img src={image[1]} alt={alt} className={styles}/>
+                }
             </div>
+
             <div
                 className={`block sm:hidden group-hover:block absolute top-1/2 left-0 ml-4  items-center justify-center ${currentImage === 0 ? 'text-gray-500' : 'text-white'} `}
                 onClick={handleImage}>
