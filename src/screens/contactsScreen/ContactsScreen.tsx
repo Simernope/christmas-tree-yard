@@ -1,12 +1,16 @@
 import {contacts} from "./contacts.ts";
 import ContactCard from "./ContactCard.tsx";
-import qr from './assets/qr.png'
+import tg from './assets/tg.png'
+import mp from './assets/mp.png'
+import av from './assets/av.png'
 
-const QrLink = (props: { image: string, description: string }) => {
+const QrLink = (props: { image: string, description: string, link: string }) => {
     return (
         <div className='flex flex-col gap-2 items-center w-[150px]'>
             <img src={props.image} alt='qr code'/>
-            <div className='underline'>{props.description}</div>
+            <a href={props.link}>
+                <div className='underline'>{props.description}</div>
+            </a>
         </div>
     )
 }
@@ -29,9 +33,11 @@ const ContactsScreen = () => {
                     }
                 </div>
                 <div className='flex gap-10 flex-wrap'>
-                    <QrLink image={qr} description={'Авито аккаунт'}/>
-                    <QrLink image={qr} description={'Адрес магазина в Екатеринбурге'}/>
-                    <QrLink image={qr} description={'Группа в телеграмме'}/>
+                    <QrLink image={av} description={'Авито аккаунт'}
+                            link='https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing'/>
+                    <QrLink image={mp} description={'Адрес магазина в Екатеринбурге'}
+                            link='https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_krasnolesya_28/YkkYcwNhQUMOQFtsfXt5c3lkZw==/?ll=60.541869%2C56.782573&z=17'/>
+                    <QrLink image={tg} description={'Группа в телеграмме'} link='https://t.me/elkivakademicheskom'/>
                 </div>
             </div>
         </section>

@@ -17,6 +17,7 @@ const GoodsScreen = () => {
                 title: mainTree.title,
                 id: mainTree.id,
                 image: mainTree.image,
+                description: mainTree.description
             }
             if (activeCardByHeight === 'Все размеры') return {...mainTree, ...tree}
             if (height === activeCardByHeight) return {...filteredMainTreeData, ...tree}
@@ -60,7 +61,9 @@ const GoodsScreen = () => {
                                     rating={tree.rating}
                                     cost={tree.cost}
                                     image={tree.image}
+                                    description={tree.description}
                                     properties={tree.properties.map(property => property.title)}
+                                    avitoLink={tree.avitoLink}
                                 />
                             )}
 

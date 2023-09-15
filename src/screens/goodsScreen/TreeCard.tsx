@@ -12,6 +12,8 @@ type TreeCardProps = {
     image: [string, string],
     properties: Array<string>,
     height: number
+    description: string
+    avitoLink: string
 }
 
 const TreeCard: FC<TreeCardProps> = (treeCardProperties) => {

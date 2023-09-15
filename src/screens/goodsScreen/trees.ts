@@ -17,6 +17,7 @@ export type TreesCardProperties = {
     id: number
     title: string
     image: [string, string]
+    description: string
     trees: Array<
         {
             id: number
@@ -34,9 +35,10 @@ export const trees: Array<TreesCardProperties> = [
         id: 1,
         title: 'Альпийская',
         image: [alpic1, alpic2],
+        description: 'Альпийская - идеальное решение для волшебной рождественской атмосферы в малых и средних интерьерах! Реалистичные веточки и форма, сравнимая с живой ёлкой.',
         trees: [
             {
-                id: 11, height: 150, cost: 6900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 11, height: 150, cost: 6900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 111, title: 'Литые веточки'},
                     {id: 112, title: 'Диаметр: 15 см'},
@@ -45,7 +47,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 12, height: 180, cost: 9900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 12, height: 180, cost: 9900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 121, title: 'Литые веточки'},
                     {id: 122, title: 'Диаметр: 15 см'},
@@ -54,7 +56,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 13, height: 210, cost: 10900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 13, height: 210, cost: 10900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 131, title: 'Литые веточки'},
                     {id: 132, title: 'Диаметр: 15 см'},
@@ -69,9 +71,10 @@ export const trees: Array<TreesCardProperties> = [
         id: 2,
         title: 'Тюменская',
         image: [tumen1, tumen2],
+        description: 'Тюменская - безусловный лидер среди конкурентов! Уникальная пышность и объемные мягкие ветви делают ее непревзойденной. Она представлена в различных размерах, от 180 до 250см, что позволяет подобрать идеальный вариант для любого интерьера, будь то квартира или большой дом.',
         trees: [
             {
-                id: 21, height: 180, cost: 12900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 21, height: 180, cost: 12900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 211, title: 'Литые веточки'},
                     {id: 212, title: 'Диаметр: 15 см'},
@@ -80,7 +83,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 22, height: 210, cost: 15900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 22, height: 210, cost: 15900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 221, title: 'Литые веточки'},
                     {id: 222, title: 'Диаметр: 15 см'},
@@ -89,7 +92,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 23, height: 230, cost: 18900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 23, height: 230, cost: 18900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 231, title: 'Литые веточки'},
                     {id: 232, title: 'Диаметр: 15 см'},
@@ -98,7 +101,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 24, height: 250, cost: 22900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 24, height: 250, cost: 22900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 241, title: 'Литые веточки'},
                     {id: 242, title: 'Диаметр: 15 см'},
@@ -113,9 +116,10 @@ export const trees: Array<TreesCardProperties> = [
         id: 3,
         title: 'Саратовская',
         image: [saratov1, saratov2],
+        description: 'Саратовская - настоящая красавица с обилием веточек, придающих ей великолепный объем и очарование. Ель этого сорта отличается пышной и плотной хвоей, а также обладает привлекательными формами. Она выглядит богато и роскошно.',
         trees: [
             {
-                id: 31, height: 180, cost: 13500, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 31, height: 180, cost: 13500, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 311, title: 'Литые веточки'},
                     {id: 312, title: 'Диаметр: 15 см'},
@@ -124,7 +128,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 32, height: 210, cost: 16500, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 32, height: 210, cost: 16500, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 321, title: 'Литые веточки'},
                     {id: 3212, title: 'Диаметр: 15 см'},
@@ -133,7 +137,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 33, height: 230, cost: 19900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 33, height: 230, cost: 19900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 331, title: 'Литые веточки'},
                     {id: 332, title: 'Диаметр: 15 см'},
@@ -148,9 +152,10 @@ export const trees: Array<TreesCardProperties> = [
         id: 1,
         title: 'Лесная',
         image: [lesnaya1, lesnaya2],
+        description: 'Лесная - это ёлочка, созданная полностью из литых ветвей. Ее главная особенность заключается в длинных, аккуратных иголочках, которые максимально реалистично напоминают настоящую хвою.',
         trees: [
             {
-                id: 41, height: 180, cost: 10900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 41, height: 180, cost: 10900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 411, title: 'Литые веточки'},
                     {id: 412, title: 'Диаметр: 15 см'},
@@ -159,7 +164,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 42, height: 210, cost: 13900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 42, height: 210, cost: 13900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 421, title: 'Литые веточки'},
                     {id: 4212, title: 'Диаметр: 15 см'},
@@ -168,7 +173,7 @@ export const trees: Array<TreesCardProperties> = [
                 ]
             },
             {
-                id: 43, height: 230, cost: 17900, rating: 5.00, avitoLink: 'https://vk.com/evgeniytlm',
+                id: 43, height: 230, cost: 17900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
                     {id: 431, title: 'Литые веточки'},
                     {id: 432, title: 'Диаметр: 15 см'},
@@ -180,57 +185,3 @@ export const trees: Array<TreesCardProperties> = [
 
     },
 ]
-
-/*
-export type TreeCardProperties = {
-    id: number
-    title: string
-    height: number
-    rating: number
-    cost: number
-    image: string
-    filterCategory: '120-150 см' | '160-210 см' | '240-500 см',
-    properties: [string, string, string]
-}
-export const trees: Array<TreeCardProperties> = [
-    {
-        id: 0,
-        title: '1 Ель искусственная Заснеженная',
-        height: 180,
-        rating: 5.00,
-        cost: 10000,
-        image: tree1,
-        properties: ['180 см', 'Литой пластик', 'Подставка'],
-        filterCategory: "160-210 см"
-    },
-    {
-        id: 1,
-        title: '2 Ель искусственная Заснеженная',
-        height: 120,
-        rating: 4.99,
-        cost: 15000,
-        image: tree2,
-        properties: ['180 см', 'Литой пластик', 'Подставка'],
-        filterCategory: "120-150 см"
-    },
-    {
-        id: 2,
-        title: '3 Ель искусственная Заснеженная',
-        height: 240,
-        rating: 4.80,
-        cost: 10000,
-        image: tree3,
-        properties: ['180 см', 'Литой пластик', 'Подставка'],
-        filterCategory: "240-500 см"
-    },
-    {
-        id: 4,
-        title: '3 Ель искусственная Заснеженная',
-        height: 180,
-        rating: 5.00,
-        cost: 10000,
-        image: tree4,
-        properties: ['180 см', 'Литой пластик', 'Подставка'],
-        filterCategory: "160-210 см"
-    }
-]*/

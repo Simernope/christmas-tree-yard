@@ -1,4 +1,4 @@
-import {FC, useState} from "react";
+import {FC, useEffect, useState} from "react";
 import leftArrow from './assets/leftArrow.svg'
 import rightArrow from './assets/rightArrow.svg'
 
@@ -10,20 +10,23 @@ type ImageSliderProps = {
 }
 const ImageSlider: FC<ImageSliderProps> = ({image, alt, styles}: ImageSliderProps) => {
     const [currentImage, setCurrentImage] = useState(0)
+
     const handleImage = () => {
         currentImage === 0 ? setCurrentImage(1) : setCurrentImage(0)
     }
+
+    useEffect(() => {
+        const img1 = new Image()
+        const img2 = new Image()
+        img1.src = image[0]
+        img2.src = image[1]
+    }, [])
+
     return (
+        image &&
         <div className={`relative group`}>
             <div>
-                {
-                    currentImage === 0 &&
-                    <img src={image[0]} alt={alt} className={styles}/>
-                }
-                {
-                    currentImage === 1 &&
-                    <img src={image[1]} alt={alt} className={styles}/>
-                }
+                <img src={image[currentImage]} alt={alt} className={styles}/>
             </div>
 
             <div

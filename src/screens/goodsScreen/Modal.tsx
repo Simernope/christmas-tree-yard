@@ -14,6 +14,8 @@ type ModalProps = {
         "cost": number,
         "image": [string, string],
         "properties": Array<string>
+        "description": string
+        "avitoLink": string
     },
     setActive: (value: boolean) => void
 }
@@ -21,7 +23,7 @@ type ModalProps = {
 const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
     const [selectedTree, setSelectedTree] = useState(treeInfo)
     const [activeCardByHeight, setActiveCardByHeight] = useState(`${treeInfo.height} см`)
-    const {title, height, cost, image, properties, rating} = selectedTree
+    const {title, height, cost, image, properties, rating, description, avitoLink} = selectedTree
 
     const propertyColors = ['bg-[#007542]', 'bg-[#3AA346]', 'bg-[#78D23D]', 'bg-[#9BE931]']
     const availableHeights = trees.find((item) => item.title === title)?.trees
@@ -111,13 +113,16 @@ const Modal: FC<ModalProps> = ({setActive, treeInfo}: ModalProps) => {
                             </div>
 
                             <div>
-                                Покупаю это молоко уже несколько лет, так как ребенку оно нравиться, цена правда около
-                                100 рублей, но оно того стоит.
+                                {description}
                             </div>
-
-                            <div className='underline mb-3'>
-                                Посмотреть этот товар на Авито
-                            </div>
+                            {
+                                avitoLink &&
+                                <a href={avitoLink} >
+                                    <div className='underline mb-3'>
+                                        Посмотреть этот товар на Авито
+                                    </div>
+                                </a>
+                            }
 
                         </div>
 
