@@ -1,8 +1,9 @@
 import {contacts} from "./contacts.ts";
 import ContactCard from "./ContactCard.tsx";
-import tg from './assets/tg.png'
+import vk from './assets/vk.png'
 import mp from './assets/mp.png'
 import av from './assets/av.png'
+import { MapAddress} from "./Map.tsx";
 
 const QrLink = (props: { image: string, description: string, link: string }) => {
     return (
@@ -19,7 +20,7 @@ const ContactsScreen = () => {
     return (
         <section id='contacts'>
             <div className='text-2xl mb-5'>Контакты</div>
-            <div className='flex gap-10 flex-wrap justify-between'>
+            <div className='flex gap-10 flex-wrap justify-between mb-5'>
                 <div className='flex flex-col md:flex-row lg:flex-col gap-10'>
                     {
                         contacts.map(item => (
@@ -37,9 +38,10 @@ const ContactsScreen = () => {
                             link='https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing'/>
                     <QrLink image={mp} description={'Адрес магазина в Екатеринбурге'}
                             link='https://yandex.ru/maps/54/yekaterinburg/house/ulitsa_krasnolesya_28/YkkYcwNhQUMOQFtsfXt5c3lkZw==/?ll=60.541869%2C56.782573&z=17'/>
-                    <QrLink image={tg} description={'Группа в телеграмме'} link='https://t.me/elkivakademicheskom'/>
+                    <QrLink image={vk} description={'Группа во Вконтакте'} link='https://vk.com/elidvor'/>
                 </div>
             </div>
+            <MapAddress />
         </section>
 
     )

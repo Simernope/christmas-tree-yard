@@ -33,35 +33,35 @@ export type TreesCardProperties = {
 export const trees: Array<TreesCardProperties> = [
     {
         id: 1,
-        title: 'Альпийская',
+        title: 'Таёжная',
         image: [alpic1, alpic2],
-        description: 'Альпийская - идеальное решение для волшебной рождественской атмосферы в малых и средних интерьерах! Реалистичные веточки и форма, сравнимая с живой ёлкой.',
+        description: 'Таёжная - идеальное решение для волшебной рождественской атмосферы в малых и средних интерьерах! Реалистичные веточки и форма, сравнимая с живой ёлкой.',
         trees: [
             {
-                id: 11, height: 150, cost: 6900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 11, height: 150, cost: 8990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 111, title: 'Литые веточки'},
-                    {id: 112, title: 'Диаметр: 15 см'},
-                    {id: 113, title: 'Подставка'},
-                    {id: 114, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Супер реалистичная'},
+                    {id: 113, title: 'Покрашенные веточки'},
+                    {id: 114, title: 'Полностью экологична'},
                 ]
             },
             {
-                id: 12, height: 180, cost: 9900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 12, height: 180, cost: 10990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 121, title: 'Литые веточки'},
-                    {id: 122, title: 'Диаметр: 15 см'},
-                    {id: 123, title: 'Подставка'},
-                    {id: 124, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Супер реалистичная'},
+                    {id: 113, title: 'Покрашенные веточки'},
+                    {id: 114, title: 'Полностью экологична'},
                 ]
             },
             {
-                id: 13, height: 210, cost: 10900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 13, height: 210, cost: 12990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 131, title: 'Литые веточки'},
-                    {id: 132, title: 'Диаметр: 15 см'},
-                    {id: 133, title: 'Подставка'},
-                    {id: 134, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Супер реалистичная'},
+                    {id: 113, title: 'Покрашенные веточки'},
+                    {id: 114, title: 'Полностью экологична'},
                 ]
             }
         ]
@@ -69,44 +69,44 @@ export const trees: Array<TreesCardProperties> = [
     },
     {
         id: 2,
-        title: 'Тюменская',
+        title: 'Московская',
         image: [tumen1, tumen2],
-        description: 'Тюменская - безусловный лидер среди конкурентов! Уникальная пышность и объемные мягкие ветви делают ее непревзойденной. Она представлена в различных размерах, от 180 до 250см, что позволяет подобрать идеальный вариант для любого интерьера, будь то квартира или большой дом.',
+        description: 'Московская - безусловный лидер среди конкурентов! Уникальная пышность и объемные мягкие ветви делают ее непревзойденной. Она представлена в различных размерах, от 180 до 250см, что позволяет подобрать идеальный вариант для любого интерьера, будь то квартира или большой дом.',
         trees: [
             {
-                id: 21, height: 180, cost: 12900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 21, height: 180, cost: 13490, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 211, title: 'Литые веточки'},
-                    {id: 212, title: 'Диаметр: 15 см'},
-                    {id: 213, title: 'Подставка'},
-                    {id: 214, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень пышная'},
+                    {id: 113, title: 'Мягкие круглые веточки'},
+                    {id: 114, title: 'Хит сезона 2022-2023'},
                 ]
             },
             {
-                id: 22, height: 210, cost: 15900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 22, height: 210, cost: 16990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 221, title: 'Литые веточки'},
-                    {id: 222, title: 'Диаметр: 15 см'},
-                    {id: 223, title: 'Подставка'},
-                    {id: 224, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень пышная'},
+                    {id: 113, title: 'Мягкие круглые веточки'},
+                    {id: 114, title: 'Хит сезона 2022-2023'},
                 ]
             },
             {
-                id: 23, height: 230, cost: 18900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 23, height: 230, cost: 19990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 231, title: 'Литые веточки'},
-                    {id: 232, title: 'Диаметр: 15 см'},
-                    {id: 233, title: 'Подставка'},
-                    {id: 234, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень пышная'},
+                    {id: 113, title: 'Мягкие круглые веточки'},
+                    {id: 114, title: 'Хит сезона 2022-2023'},
                 ]
             },
             {
-                id: 24, height: 250, cost: 22900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 24, height: 250, cost: 23990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 241, title: 'Литые веточки'},
-                    {id: 242, title: 'Диаметр: 15 см'},
-                    {id: 243, title: 'Подставка'},
-                    {id: 244, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень пышная'},
+                    {id: 113, title: 'Мягкие круглые веточки'},
+                    {id: 114, title: 'Хит сезона 2022-2023'},
                 ]
             }
         ]
@@ -114,35 +114,35 @@ export const trees: Array<TreesCardProperties> = [
     },
     {
         id: 3,
-        title: 'Саратовская',
+        title: 'Уральская',
         image: [saratov1, saratov2],
-        description: 'Саратовская - настоящая красавица с обилием веточек, придающих ей великолепный объем и очарование. Ель этого сорта отличается пышной и плотной хвоей, а также обладает привлекательными формами. Она выглядит богато и роскошно.',
+        description: 'Уральская - настоящая красавица с обилием веточек, придающих ей великолепный объем и очарование. Ель этого сорта отличается пышной и плотной хвоей, а также обладает привлекательными формами. Она выглядит богато и роскошно.',
         trees: [
             {
-                id: 31, height: 180, cost: 13500, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 31, height: 180, cost: 13990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 311, title: 'Литые веточки'},
-                    {id: 312, title: 'Диаметр: 15 см'},
-                    {id: 313, title: 'Подставка'},
-                    {id: 314, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень густая'},
+                    {id: 113, title: 'Новинка сезона 2023-2024'},
+                    {id: 114, title: 'Премиальный вид и качество'},
                 ]
             },
             {
-                id: 32, height: 210, cost: 16500, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 32, height: 210, cost: 17990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 321, title: 'Литые веточки'},
-                    {id: 3212, title: 'Диаметр: 15 см'},
-                    {id: 323, title: 'Подставка'},
-                    {id: 324, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень густая'},
+                    {id: 113, title: 'Новинка сезона 2023-2024'},
+                    {id: 114, title: 'Премиальный вид и качество'},
                 ]
             },
             {
-                id: 33, height: 230, cost: 19900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 33, height: 230, cost: 22990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 331, title: 'Литые веточки'},
-                    {id: 332, title: 'Диаметр: 15 см'},
-                    {id: 333, title: 'Подставка'},
-                    {id: 334, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Очень густая'},
+                    {id: 113, title: 'Новинка сезона 2023-2024'},
+                    {id: 114, title: 'Премиальный вид и качество'},
                 ]
             }
         ]
@@ -150,35 +150,35 @@ export const trees: Array<TreesCardProperties> = [
     },
     {
         id: 1,
-        title: 'Лесная',
+        title: 'Сибирская',
         image: [lesnaya1, lesnaya2],
-        description: 'Лесная - это ёлочка, созданная полностью из литых ветвей. Ее главная особенность заключается в длинных, аккуратных иголочках, которые максимально реалистично напоминают настоящую хвою.',
+        description: 'Сибирская - это ёлочка, созданная полностью из литых ветвей. Ее главная особенность заключается в длинных, аккуратных иголочках, которые максимально реалистично напоминают настоящую хвою.',
         trees: [
             {
-                id: 41, height: 180, cost: 10900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 41, height: 180, cost: 12990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 411, title: 'Литые веточки'},
-                    {id: 412, title: 'Диаметр: 15 см'},
-                    {id: 413, title: 'Подставка'},
-                    {id: 414, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Иголочки как у живой елки'},
+                    {id: 113, title: 'Коричневые веточки'},
+                    {id: 114, title: 'Сертификат качества'},
                 ]
             },
             {
-                id: 42, height: 210, cost: 13900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 42, height: 210, cost: 15990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 421, title: 'Литые веточки'},
-                    {id: 4212, title: 'Диаметр: 15 см'},
-                    {id: 423, title: 'Подставка'},
-                    {id: 424, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Иголочки как у живой елки'},
+                    {id: 113, title: 'Коричневые веточки'},
+                    {id: 114, title: 'Сертификат качества'},
                 ]
             },
             {
-                id: 43, height: 230, cost: 17900, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
+                id: 43, height: 230, cost: 18990, rating: 5.00, avitoLink: 'https://www.avito.ru/user/5a48aba828a4a8dfa259d383a3ea312b/profile?src=sharing',
                 properties: [
-                    {id: 431, title: 'Литые веточки'},
-                    {id: 432, title: 'Диаметр: 15 см'},
-                    {id: 433, title: 'Подставка'},
-                    {id: 434, title: 'Вес: 5 кг '},
+                    {id: 111, title: 'Литая Российская ель'},
+                    {id: 112, title: 'Иголочки как у живой елки'},
+                    {id: 113, title: 'Коричневые веточки'},
+                    {id: 114, title: 'Сертификат качества'},
                 ]
             }
         ]

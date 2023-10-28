@@ -9,7 +9,7 @@ const GoodsScreen = () => {
     const [activeCardByHeight, setActiveCardByHeight] = useState('180 см')
     const [activeCardByTitle, setActiveCardByTitle] = useState('Все модели')
     const heights = ['Все размеры', '150 см', '180 см', '210 см', '230 см', '250 см']
-    const titles = ['Все модели', 'Альпийская', 'Тюменская', 'Саратовская', 'Лесная']
+    const titles = ['Все модели', 'Таёжная', 'Московская', 'Уральская', 'Сибирская']
     const filteredTrees = trees.map(mainTree =>
         mainTree.trees.map(tree => {
             const height = tree.height + ' см'
